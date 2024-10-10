@@ -35,24 +35,47 @@
       The container is exposing port `80`, which is the standard port for HTTP traffic. This allows access to the NGINX server from other Pods or services that might want to communicate with it.
 
 
-# Commands for execution
+## Commands for Execution
 
-- '''
-kubectl apply -f pod.yaml
-  '''
-This command creates the NGINX Pod in your Kubernetes cluster based on the configuration in the YAML file.
+### 1. Deploy the Pod
 
-- '''
+```bash
+kubectl apply -f nginx-pod.yaml
+```
+**Purpose**: This command applies the YAML configuration and creates the NGINX Pod in your Kubernetes cluster. The Pod will run using the `nginx:1.14.2` image, exposing port 80.
+
+---
+
+### 2. Check the Status of the Pod
+
+```bash
 kubectl get pods
-  '''
-Displays a list of running Pods in your cluster. You should see the Pod named 'nginx' with the status 'Running'.
+```
+**Purpose**: This command lists all running Pods in your cluster. After running it, you should see a Pod named `nginx` in the list with a status of `Running` if everything is working correctly.
 
-- '''
+---
+
+### 3. Get Detailed Pod Information
+
+```bash
 kubectl describe pod nginx
-  '''
-Provides detailed information about the nginx Pod, including events, status, container information, and any errors or warnings that occurred during the creation of the Pod. Also used for debugging.
+```
+**Purpose**: This command provides detailed information about the `nginx` Pod, including:
+- Events (such as creation, scheduling, and container start)
+- Pod status
+- Container configuration
+- Any errors or warnings
 
-- '''
+This is useful for troubleshooting if the Pod isn't behaving as expected or if you want detailed logs for debugging.
+
+---
+
+### 4. Delete the Pod
+
+```bash
 kubectl delete pod nginx
-  '''
-Removes the NGINX Pod from your Kubernetes cluster
+```
+**Purpose**: This command deletes the `nginx` Pod from your Kubernetes cluster. You can run this when you no longer need the Pod.
+
+---
+
