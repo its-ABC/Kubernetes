@@ -60,7 +60,7 @@ This YAML configuration defines a single NGINX container inside a Kubernetes Pod
 ### 1. Deploy the Pod
 
 ```bash
-kubectl apply -f nginx-pod.yaml
+kubectl apply -f pod.yaml
 ```
 **Purpose**: This command applies the YAML configuration and creates the NGINX Pod in your Kubernetes cluster. The Pod will run using the `nginx:1.14.2` image, exposing port 80.
 
