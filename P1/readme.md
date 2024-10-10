@@ -36,14 +36,22 @@
 
 # Commands for execution
 
-- '''kubectl apply -f pod.yaml'''
+- '''
+kubectl apply -f pod.yaml
+'''
 This command creates the NGINX Pod in your Kubernetes cluster based on the configuration in the YAML file.
 
-- '''kubectl get pods'''
+- '''
+kubectl get pods
+'''
 Displays a list of running Pods in your cluster. You should see the Pod named 'nginx' with the status 'Running'.
 
-- '''kubectl describe pod nginx'''
+- '''
+kubectl describe pod nginx
+'''
 Provides detailed information about the nginx Pod, including events, status, container information, and any errors or warnings that occurred during the creation of the Pod. Also used for debugging.
 
-- '''kubectl delete pod nginx'''
+- '''
+kubectl delete pod nginx
+'''
 Removes the NGINX Pod from your Kubernetes cluster
