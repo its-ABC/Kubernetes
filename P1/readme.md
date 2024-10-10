@@ -9,10 +9,7 @@
 
 ---
 
-### 1. 
-```bash
-apiVersion: v1
-```
+### 1. `apiVersion: v1`
 
 - **Description**: Specifies the API version used for this object definition.Kubernetes uses different API versions for various objects. `v1` is one of the stable API versions, commonly used for core resources like Pods.
 
