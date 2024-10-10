@@ -1,37 +1,73 @@
 
 # NGINX Pod YAML Configuration
 
-### 1. `apiVersion: v1`
+### 1. 
+```bash
+apiVersion: v1
+```
 
      - Specifies the API version used for this object definition.  
 
 
-### 2. `kind: Pod`
+### 2. 
+```bash
+kind: Pod
+```
      Defines the type of Kubernetes object.  
 
 
-### 3. `metadata:`
+### 3. 
+```bash
+metadata:
+```
      Provides metadata for the Pod, such as its name.Metadata contains important information about the Pod, including how it can be identified within the cluster. In this case, metadata only includes the Pod's name.
 
-- **`name: nginx`**  
+- **
+```bash
+name: nginx
+```
+**  
      The name given to the Pod. The Pod is named `nginx`. This name must be unique within the same namespace in Kubernetes. The name helps in identifying and managing the Pod when running various `kubectl` commands like `kubectl get pods` or `kubectl delete pod nginx`.
 
-### 4. `spec:`
+### 4. 
+```bash
+spec:
+```
      This is where we describe what the Pod should look like. It contains details about the containers that will be running in this Pod, including images and ports.
 
-- **`containers:`**  
+- **
+```bash
+containers:
+```
+**  
      Defines the list of containers that will run inside the Pod. Every Pod must have at least one container, but it can run multiple containers. The `containers` field is an array, and in this case, only one container is specified.
 
-  - **`- name: nginx`**  
+  - **
+  ```bash
+  - name: nginx
+  ```
+  **  
      This container is named `nginx`. The name should be unique within the Pod but can be the same across different Pods. It is helpful for referring to this container in logs or debugging.
 
-  - **`image: nginx:1.14.2`**  
+  - **
+  ```bash
+  image: nginx:1.14.2
+  ```
+  **  
      The container will run using the `nginx` image from Docker Hub, specifically version `1.14.2`. The image is pulled from the default Docker registry unless otherwise specified. NGINX is a popular web server used for hosting websites and web services.
 
-  - **`ports:`**  
+  - **
+  ```bash
+  ports:
+  ```
+  **  
      A container can expose one or more ports to enable communication with the outside world or other containers. This field lists the container ports that need to be exposed.
 
-    - **`- containerPort: 80`**  
+    - **
+    ```bash
+    - containerPort: 80
+    ```
+    **  
       The container is exposing port `80`, which is the standard port for HTTP traffic. This allows access to the NGINX server from other Pods or services that might want to communicate with it.
 
 
