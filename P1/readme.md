@@ -37,6 +37,7 @@
 
 ## Commands for Execution
 
+
 ### 1. Deploy the Pod
 
 ```bash
