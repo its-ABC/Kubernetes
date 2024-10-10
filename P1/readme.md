@@ -2,7 +2,8 @@
 # NGINX Pod YAML Configuration
 
 ### 1. `apiVersion: v1`
-     Specifies the API version used for this object definition.  
+
+     - Specifies the API version used for this object definition.  
 
 
 ### 2. `kind: Pod`
