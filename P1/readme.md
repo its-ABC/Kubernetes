@@ -3,7 +3,7 @@
 
 ---
 
-# NGINX Pod YAML Configuration
+## NGINX Pod YAML Configuration
 
 
 
@@ -54,7 +54,7 @@
 This YAML configuration defines a single NGINX container inside a Kubernetes Pod, specifying its image version and exposing port 80 for HTTP traffic.
 
 
-## Commands for Execution
+# Commands for Execution
 
 
 ### 1. Deploy the Pod
