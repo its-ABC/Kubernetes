@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: My-Application
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: My-Application
+  template:
+    metadata:
+      labels:
+        app: My-Application
+    spec:
+      containers:
+      - name: My-Python-App
+        image: # take the image 
+        ports:
+        - containerPort: 80
