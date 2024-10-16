@@ -4,7 +4,7 @@ In Kubernetes, **Custom Resources (CRs)** are extensions of the Kubernetes API t
 ---
 
 ### 1. **CustomResourceDefinition (CRD)**
- The CRD is the blueprint for creating your custom resource. It defines the schema (structure) of the resource and tells Kubernetes how to understand and validate the custom objects you're going to create. Once the CRD is applied to the cluster, users can create instances of the resource.
+- The CRD is the blueprint for creating your custom resource. It defines the schema (structure) of the resource and tells Kubernetes how to understand and validate the custom objects you're going to create. Once the CRD is applied to the cluster, users can create instances of the resource.
 
 
 ### 2. **Custom Resource (CR)**
